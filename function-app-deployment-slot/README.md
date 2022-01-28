@@ -2,7 +2,7 @@
 
 This sample Azure Resource Manager template deploys an Azure Function App with production slot and an aditional <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots">deployment slot</a>.
 
-[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/<url-encoded-path-to-azuredeploy-json>)
+[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fblob%2Fmain%2Ffunction-app-deployment-slot%2Fazuredeploy.json)
 
 ### OS
 
