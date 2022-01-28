@@ -2,7 +2,7 @@
 
 This sample Azure Resource Manager template deploys an Azure Function App hosted on Premium plan and required resource including ZipDeploy extension to mount zip package for deployment.
 
-[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/<url-encoded-path-to-azuredeploy-json>)
+[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fblob%2Fmain%2Ffunction-app-premium-plan%2Fazuredeploy.json)
 
 ### OS
 
