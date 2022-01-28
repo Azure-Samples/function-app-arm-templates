@@ -1,57 +1,28 @@
-# Project Name
+# ARM Templates for Function App Deployment
 
-(short, 1-3 sentenced, description of the project)
+This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices. 
 
-## Features
+Templates for the following OS and SKU are available:
 
-This project framework provides the following features:
+1. Create [Function App with Consumption Plan on Linux](/function-app-linux-consumption)
+2. Create [Function App with Consumption Plan on Windows](/function-app-windows-consumption)
+3. Create [Function App with Premium Plan](/function-app-premium-plan) on Windows/Linux
+4. Create [Function App with Dedicated Plan](/function-app-dedicated-plan) on Windows/Linux
 
-* Feature 1
-* Feature 2
-* ...
+Templates for the following deployment and networking scenarios are available:
 
-## Getting Started
+1. Create [Function App with a Deployment Slot](/function-app-deployment-slot)
+2. Create [Function App with Virtual Network Integration](/function-app-vnet-integration)
+3. Create [Function App with Azure Storage private endpoints](/function-app-storage-private-endpoints)
+4. Deploy [Function App with ZipDeploy using Run From Package](/zip-deploy-run-from-package)
 
-### Prerequisites
+This repo also contains wiki pages on the following:
 
-(ideally very short, if any)
+1. [Best Practices Guide](../../wiki/Best-Practices-Guide)
+2. [Frequently Asked Questions (FAQs)](../../wiki/Frequently-Asked-Questions-(FAQs))
+3. [Important App Settings for Function Apps](../../wiki/App-Settings-for-Function-Apps)
+4. [ARM Templates for Function App with different Hosting Plans](../../wiki/ARM-Templates-for-Function-Apps-with-different-Hosting-Plans)
 
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+For more information on deploying ARM template, please refer: [Deploy resources with ARM templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-portal)
 
 
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
