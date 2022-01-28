@@ -10,7 +10,7 @@ NOTE: ZipDeploy with the appSetting `WEBSITE_RUN_FROM_PACKAGE=1` is not supporte
 
 If you have an existing Function App with right appSettings and want to perform deployment with ZipDeploy extension, then here is the template:
 
-[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/<url-encoded-path-to-azuredeploy-json>)
+[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fblob%2Fmain%2Fzip-deploy-run-from-package%2Fazuredeploy.json)
 
 The following example shows declartion of ZipDeploy extension in site resources along with the recommended WEBSITE_RUN_FROM_PACKAGE appSetting:
 
