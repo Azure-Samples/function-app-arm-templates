@@ -38,8 +38,6 @@ The Storage account that the Function uses for operation and for file contents.
 
 + **Microsoft.Insights/components**: The Application Insights instance used by the Azure Function for monitoring.
 
-<br/>
-
 ### NOTE
 
 + For more information on configuring Azure Storage firewalls and virtual networks, please refer: [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal)
