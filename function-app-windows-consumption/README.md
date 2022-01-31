@@ -2,7 +2,7 @@
 
 This sample Azure Resource Manager template deploys an Azure Function App on Windows Consumption plan and required resource including ZipDeploy extension to mount zip package for deployment.
 
-[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fblob%2Fmain%2Ffunction-app-windows-consumption%2Fazuredeploy.json)
+[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fmain%2Ffunction-app-windows-consumption%2Fazuredeploy.json)
 
 ### OS
 
