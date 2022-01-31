@@ -40,7 +40,9 @@ The Storage account that the Function uses for operation and for file contents.
 
 <br/>
 
-For more information on configuring Azure Storage firewalls and virtual networks, please refer: [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal)
+### NOTE
 
-For more information on Azure Functions networking options and VNET integration, please refer: [Azure Functions Networking Options](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#restrict-your-storage-account-to-a-virtual-network)
++ For more information on configuring Azure Storage firewalls and virtual networks, please refer: [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal)
+
++ For more information on Azure Functions networking options and VNET integration, please refer: [Azure Functions Networking Options](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#restrict-your-storage-account-to-a-virtual-network)
 
