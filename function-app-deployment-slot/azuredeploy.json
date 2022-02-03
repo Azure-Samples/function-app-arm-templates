@@ -84,7 +84,7 @@
     "applicationInsightsName": "[parameters('functionAppName')]",
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
     "isReserved": "[if(equals(parameters('functionPlanOS'), 'Linux'), true(), false())]",
-    "functionContentShareName": "[concat(parameters('functionAppName'), '-deployment')]"
+    "slotContentShareName": "[concat(parameters('functionAppName'), '-deployment')]"
   },
   "resources": [
     {
@@ -204,7 +204,7 @@
             },
             {
               "name": "WEBSITE_CONTENTSHARE",
-              "value": "[variables('functionContentShareName')]"
+              "value": "[variables('slotContentShareName')]"
             },
             {
               "name": "FUNCTIONS_EXTENSION_VERSION",
