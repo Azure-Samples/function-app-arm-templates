@@ -1,3 +1,13 @@
+---
+page_type: sample
+languages:
+- arm-template
+products:
+- azure-functions
+description: "This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices."
+urlFragment: azure-functions-image-identify
+---
+
 # ARM Templates for Function App Deployment
 
 This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices. 
