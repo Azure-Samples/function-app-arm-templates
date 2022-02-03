@@ -545,10 +545,6 @@
               "value": "~14"
             },
             {
-              "name": "WEBSITE_RUN_FROM_PACKAGE",
-              "value": "1"
-            },
-            {
               "name": "WEBSITE_VNET_ROUTE_ALL",
               "value": "1"
             },
