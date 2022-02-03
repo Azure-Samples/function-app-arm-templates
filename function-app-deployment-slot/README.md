@@ -26,7 +26,7 @@ Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-
 
 Function apps running under the Apps Service plan may have multiple slots, while under the Consumption plan only one slot is allowed.
 
-Don't set the [WEBSITE_CONTENTSHARE](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings#website_contentshare) setting in a deployment slot. This setting is generated for you when the app is created in the deployment slot.
+For Windows, do not need to set the [WEBSITE_CONTENTSHARE](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings#website_contentshare) setting in a deployment slot. This setting is generated for you when the app is created in the deployment slot.
 
 + **Microsoft.Web/sites/slots**: The deployment slot for the function app.
 
