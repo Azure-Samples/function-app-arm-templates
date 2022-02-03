@@ -83,7 +83,8 @@
     "hostingPlanName": "[parameters('functionAppName')]",
     "applicationInsightsName": "[parameters('functionAppName')]",
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
-    "isReserved": "[if(equals(parameters('functionPlanOS'), 'Linux'), true(), false())]"
+    "isReserved": "[if(equals(parameters('functionPlanOS'), 'Linux'), true(), false())]",
+    "functionContentShareName": "[concat(parameters('functionAppName'), '-deployment')]"
   },
   "resources": [
     {
@@ -200,6 +201,10 @@
             {
               "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
               "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('storageAccountName'), ';EndpointSuffix=', environment().suffixes.storage, ';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2019-06-01').keys[0].value)]"
+            },
+            {
+              "name": "WEBSITE_CONTENTSHARE",
+              "value": "[variables('functionContentShareName')]"
             },
             {
               "name": "FUNCTIONS_EXTENSION_VERSION",
