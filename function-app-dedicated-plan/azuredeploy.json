@@ -142,6 +142,7 @@
         "[resourceId('Microsoft.Insights/components', variables('applicationInsightsName'))]"
       ],
       "properties": {
+        "alwaysOn": true,
         "reserved": "[variables('isReserved')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
         "siteConfig": {
