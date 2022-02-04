@@ -8,9 +8,7 @@ languages:
 - typescript
 - json
 products:
-- azure-resource-manager
 - azure-functions
-- templates
 - azure
 ---
 
