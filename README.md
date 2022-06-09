@@ -28,7 +28,8 @@ Templates for the following deployment and networking scenarios are available:
 1. Create [Function App with a Deployment Slot](/function-app-deployment-slot)
 2. Create [Function App with Virtual Network Integration](/function-app-vnet-integration)
 3. Create [Function App with Azure Storage private endpoints](/function-app-storage-private-endpoints)
-4. Deploy [Function App with ZipDeploy using Run From Package](/zip-deploy-run-from-package)
+4. Create [Function App with private endpoints and Azure Storage with private endpoints](/function-app-private-endpoints-storage-private-endpoints)
+5. Deploy [Function App with ZipDeploy using Run From Package](/zip-deploy-run-from-package)
 
 This repo also contains wiki pages on the following:
 
