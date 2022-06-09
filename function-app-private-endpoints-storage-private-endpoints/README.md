@@ -2,9 +2,9 @@
 
 This sample Azure Resource Manager template deploys an Azure Function App that communicates with the Azure Storage account referenced by the AzureWebJobsStorage and WEBSITE_CONTENTAZUREFILECONNECTIONSTRING app settings, [via private endpoints](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#private-endpoint-connections). 
 
-[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fmain%2Ffunction-app-storage-private-endpoints%2Fazuredeploy.json)
+[![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fmain%2Ffunction-app-private-endpoints-storage-private-endpoints%2Fazuredeploy.json)
 
-![Function App with Storage Private Endpoints](/function-app-storage-private-endpoints/images/function-app-storage-private-endpoints.jpg) 
+![Function App with Storage Private Endpoints](/function-app-private-endpoints-storage-private-endpoints/images/function-app-private-endpoints-storage-private-endpoints.jpg) 
 
 ### OS
 
@@ -41,6 +41,7 @@ The sample uses two subnets:
 
 [Azure Private Endpoints](https://docs.microsoft.com/azure/private-link/private-endpoint-overview) are used to connect to specific Azure resources using a private IP address  This ensures that network traffic remains within the designated virtual network, and access is available only for specific resources.  This sample configures private endpoints for the following Azure resources:
 
+- [Azure Funcion App](https://docs.microsoft.com/en-us/azure/app-service/networking/private-endpoint)
 - [Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-private-endpoints)
   - Azure File storage
   - Azure Blob storage
@@ -55,6 +56,7 @@ A private DNS zone will be created for each Azure resource configured with a pri
 
 The following DNS zones are created in this sample:
 
+- privatelink.azurewebsites.net
 - privatelink.queue.core.windows.net
 - privatelink.blob.core.windows.net
 - privatelink.table.core.windows.net
@@ -68,6 +70,7 @@ The following DNS zones are created in this sample:
 
 ### NOTE:
 
++ This ARM template will secure your Function App by configuring the Private Endpoint, eliminating public exposure. You can connect to your App from on-premises networks that connects to the VNet using a VPN or ExpressRoute private peering.
 + This ARM template will allow access to the storage account through the private endpoints only. So, you will not be able to access the data storage in the storage account through the portal or otherwise. 
 + You can give access to your secured IP address or virtual network for the data storage in the storage account, by [Managing the default network access rule](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#change-the-default-network-access-rule)
 
