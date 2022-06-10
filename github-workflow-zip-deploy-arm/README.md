@@ -7,7 +7,7 @@ This workflow can be used when the following conditions are met:
 ### Pre-requisite
 1. Have a copy of the ARM template [azuredeploy.json](/github-workflow-zip-deploy-arm/azuredeploy.json) in the root of the repo.
 2. Setup [Azure Service Principle for RBAC as Deployment Credential](/github-workflow-zip-deploy-arm#Azure-Service-Principle-for-RBAC-as-Deployment-Credential) using the steps below.
-3. Update evironment variables in the `workflow.yml` with those of your app.
+3. Update evironment variables in the [workflow.yml](/github-workflow-zip-deploy-arm/workflow.yml) with those of your app.
 4. This template is for DotNet function app on Windows OS. Please refer [sample templates](https://github.com/Azure/actions-workflow-samples/tree/master/FunctionApp) for other languages and OS to modify this template accordingly.
 
 ### Azure Service Principle for RBAC as Deployment Credential
