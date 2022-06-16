@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",    
+    "parameters": {
+      "functionAppName": {
+        "type": "string",
+        "metadata": {
+          "description": "The name of the Azure Function app."
+        }
+      },
+      "location": {
+        "type": "string",
+        "defaultValue": "[resourceGroup().location]",
+        "metadata": {
+          "description": "The location into which the resources should be deployed."
+        }
+      },
+      "packageUri": {
+        "type": "string",
+        "metadata": {
+          "description": "The zip content url."
+        }
+      }
+    },
+    "resources": [
+      {
+        "name": "[concat(parameters('functionAppName'), '/ZipDeploy')]",
+        "type": "Microsoft.Web/sites/extensions",
+        "apiVersion": "2021-02-01",
+        "location": "[parameters('location')]",
+        "properties": {
+          "packageUri": "[parameters('packageUri')]"
+        }        
+      }
+    ]
+  }
