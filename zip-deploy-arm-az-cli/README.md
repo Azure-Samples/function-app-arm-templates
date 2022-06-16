@@ -2,7 +2,7 @@
 This workflow can be used when the following conditions are met:
 1. Function app is locked behind [private endpoint](https://docs.microsoft.com/en-us/azure/app-service/networking/private-endpoint).
 2. Storage account is locked behind [private endpoints](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints).
-3. Want to setup [continuous deployment](https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment) pipeline for GitHub repo.
+3. Want to deploy from your local machine that is not in the Virtual Network.
 
 ### PRe-requisite
 1. Build and create [.zip package](https://github.com/Azure-Samples/function-app-arm-templates/wiki/Best-Practices-Guide#deployment-zip-file-requirements) of your code in a folder.
