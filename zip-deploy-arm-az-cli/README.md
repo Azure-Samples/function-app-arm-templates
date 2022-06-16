@@ -6,8 +6,8 @@ This workflow can be used when the following conditions are met:
 
 ### PRe-requisite
 1. Build and create [.zip package](https://github.com/Azure-Samples/function-app-arm-templates/wiki/Best-Practices-Guide#deployment-zip-file-requirements) of your code in a folder.
-2. Have a copy of the ARM template [azuredeploy.json](/zip-deploy-arm-github-workflow/azuredeploy.json) in the same folder.
-3. Have a copy of the ARM template [azuredeploy.parameters.json](/zip-deploy-arm-github-workflow/azuredeploy.parameters.json) in the same folder.
+2. Have a copy of the ARM template [azuredeploy.json](/zip-deploy-arm-az-cli/azuredeploy.json) in the same folder.
+3. Have a copy of the ARM template [azuredeploy.parameters.json](/zip-deploy-arm-az-cli/azuredeploy.parameters.json) in the same folder.
 
 ### Steps:
 
