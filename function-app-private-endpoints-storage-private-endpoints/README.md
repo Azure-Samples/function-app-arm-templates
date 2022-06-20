@@ -4,7 +4,7 @@ This sample Azure Resource Manager template deploys an Azure Function App that c
 
 [![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fmain%2Ffunction-app-private-endpoints-storage-private-endpoints%2Fazuredeploy.json)
 
-![Function App with Storage Private Endpoints](/function-app-private-endpoints-storage-private-endpoints/images/function-app-private-endpoints-storage-private-endpoints.png) 
+![Function App with Storage Private Endpoints](/function-app-private-endpoints-storage-private-endpoints/images/function-app-private-endpoints-storage-private-endpoints.jpg) 
 
 ### OS
 
