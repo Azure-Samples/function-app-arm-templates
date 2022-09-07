@@ -110,7 +110,7 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
 
 resource zipDeploy 'Microsoft.Web/sites/extensions@2022-03-01' = {
   parent: functionApp
-  name: 'MSDeploy'
+  name: 'zipdeploy'
   properties: {
     packageUri: packageUri
   }
