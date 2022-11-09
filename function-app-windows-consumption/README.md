@@ -1,3 +1,13 @@
+---
+description: This template provisions a function app on a Consumption plan, which is a dynamic hosting plan. The app runs on demand and you're billed per execution, with no standing resource committment.
+page_type: sample
+products:
+- azure
+- azure-resource-manager
+urlFragment: function-app-windows-consumption
+languages:
+- json
+---
 # Azure Function App Hosted on Windows Consumption Plan
 
 This sample Azure Resource Manager template deploys an Azure Function App on Windows Consumption plan and required resource including ZipDeploy extension to mount zip package for deployment.
@@ -37,3 +47,5 @@ The Storage account that the Function uses for operation and for file contents.
 [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview) is used to provide [monitor the Azure Function](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
 
 + **Microsoft.Insights/components**: The Application Insights instance used by the Azure Function for monitoring.
+
+`Tags: Microsoft.Storage/storageAccounts, microsoft.insights/components, Microsoft.Web/serverfarms, Microsoft.Web/sites, Microsoft.Web/sites/extensions`
