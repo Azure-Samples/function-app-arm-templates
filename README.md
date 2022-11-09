@@ -16,22 +16,25 @@ products:
 
 This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices. 
 
-Templates for the following OS and SKU are available:
+Create and deploy Functions app for following OS and SKU combinations:
 
 1. Create [Function App with Consumption Plan on Linux](/function-app-linux-consumption)
 2. Create [Function App with Consumption Plan on Windows](/function-app-windows-consumption)
 3. Create [Function App with Premium Plan](/function-app-premium-plan) on Windows/Linux
 4. Create [Function App with Dedicated Plan](/function-app-dedicated-plan) on Windows/Linux
 
-Templates for the following deployment and networking scenarios are available:
+Create Functions app and resources for following networking scenarios:
 
 1. Create [Function App with a Deployment Slot](/function-app-deployment-slot)
 2. Create [Function App with Virtual Network Integration](/function-app-vnet-integration)
 3. Create [Function App with Azure Storage private endpoints](/function-app-storage-private-endpoints)
 4. Create [Function App with private endpoints and Azure Storage with private endpoints](/function-app-private-endpoints-storage-private-endpoints)
+    
+Deploy Functions app code for following scenarios:
+1. Deploy [Function App with ZipDeploy using Run From Package](/zip-deploy-run-from-package)
+2. If Function App with private endpoints and Azure Storage with private endpoints:
     - Deploy [Function App with ARM template using Az CLI](/zip-deploy-arm-az-cli)
     - Deploy [Function App with ARM template in GitHub Workflow](/zip-deploy-arm-github-workflow)
-6. Deploy [Function App with ZipDeploy using Run From Package](/zip-deploy-run-from-package)
 
 This repo also contains wiki pages on the following:
 
