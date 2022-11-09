@@ -442,14 +442,16 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "apiVersion": "2021-02-01",
+            "apiVersion": "2021-09-01",
             "name": "[parameters('functionStorageAccountName')]",
             "location": "[parameters('location')]",
+            "kind": "StorageV2",
             "sku": {
                 "name": "Standard_LRS"
             },
-            "kind": "StorageV2",
             "properties": {
+                "publicNetworkAccess": "Disabled",
+                "allowBlobPublicAccess": false,
                 "networkAcls": {
                     "bypass": "None",
                     "defaultAction": "Deny"
