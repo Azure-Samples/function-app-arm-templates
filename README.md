@@ -18,10 +18,12 @@ This repo contains currently available Azure Resource Manager templates for depl
 
 Create and deploy Functions app for following OS and SKU combinations:
 
-1. Create [Function App with Consumption Plan on Linux](/function-app-linux-consumption)
-2. Create [Function App with Consumption Plan on Windows](/function-app-windows-consumption)
-3. Create [Function App with Premium Plan](/function-app-premium-plan) on Windows/Linux
-4. Create [Function App with Dedicated Plan](/function-app-dedicated-plan) on Windows/Linux
+1. Create [Function App with Premium Plan](/function-app-premium-plan) on Windows/Linux
+2. Create [Function App with Dedicated Plan](/function-app-dedicated-plan) on Windows/Linux
+3. Create [Function App with Consumption Plan on Windows](/function-app-windows-consumption)
+4. Create Function App with Consumption Plan on Linux:
+    - [Deploy zip package with Run From Package](/function-app-linux-consumption)
+    - [Deploy zip package with Remote Build](/function-app-linux-consumption-remote-build)
 
 Create Functions app and resources for following networking scenarios:
 
