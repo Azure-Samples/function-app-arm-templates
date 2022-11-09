@@ -1,5 +1,5 @@
 ---
-description: This template provisions a function app on a Premium plan with production slot and an aditional deployment slot.
+description: This template provisions a function app on a Premium plan with production slot and an additional deployment slot.
 page_type: sample
 products:
 - azure
@@ -10,7 +10,7 @@ languages:
 ---
 # Azure Function App with a Deployment Slot
 
-This sample Azure Resource Manager template deploys an Azure Function App with production slot and an aditional <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots">deployment slot</a>.
+This sample Azure Resource Manager template deploys an Azure Function App with production slot and an additional <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots">deployment slot</a>.
 
 [![Deploy to Azure](/images/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Ffunction-app-arm-templates%2Fmain%2Ffunction-app-deployment-slot%2Fazuredeploy.json)
 
