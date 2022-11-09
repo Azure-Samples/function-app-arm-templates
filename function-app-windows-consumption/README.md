@@ -1,5 +1,5 @@
 ---
-description: This template provisions a function app on a Consumption plan, which is a dynamic hosting plan. The app runs on demand and you're billed per execution, with no standing resource committment.
+description: This template provisions a function app on a Windows Consumption plan, which is a dynamic hosting plan. The app runs on demand and you're billed per execution, with no standing resource committment.
 page_type: sample
 products:
 - azure
