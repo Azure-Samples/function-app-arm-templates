@@ -1,3 +1,13 @@
+---
+description: This template provisions a function app on a Linux Consumption plan, which is a dynamic hosting plan. The app runs on demand and you're billed per execution, with no standing resource committment.
+page_type: sample
+products:
+- azure
+- azure-resource-manager
+urlFragment: function-app-linux-consumption-remote-build
+languages:
+- json
+---
 # Azure Function App Hosted on Linux Consumption Plan
 
 This sample Azure Resource Manager template deploys an Azure Function App on Linux Consumption plan and required resource including the app setting to deploy using zip package when **remote build** is needed (for example: to get Linux specific packages in python, node.js).
@@ -39,3 +49,5 @@ The Storage account that the Function uses for operation and for file contents.
 [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview) is used to provide [monitor the Azure Function](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
 
 + **Microsoft.Insights/components**: The Application Insights instance used by the Azure Function for monitoring.
+
+`Tags: Microsoft.Storage/storageAccounts, microsoft.insights/components, Microsoft.Web/serverfarms, Microsoft.Web/sites, Microsoft.Web/sites/extensions`
