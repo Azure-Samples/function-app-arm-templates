@@ -1,5 +1,5 @@
 ---
-description: This template allows you to deploy an Azure Function App that has private endpoints and communicates with Azure Storage over private endpoints.
+description: This template provisions a function app on a Premium plan that has private endpoints and communicates with Azure Storage over private endpoints.
 page_type: sample
 products:
 - azure
