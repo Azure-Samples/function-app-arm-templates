@@ -1,3 +1,13 @@
+---
+description: This template allows you to deploy an Azure Function App that has private endpoints and communicates with Azure Storage over private endpoints.
+page_type: sample
+products:
+- azure
+- azure-resource-manager
+urlFragment: function-app-private-endpoints-storage-private-endpoints
+languages:
+- json
+---
 # Azure Function App with private endpoint and Azure Storage with private endpoints
 
 This sample Azure Resource Manager template deploys an Azure Function App that communicates with the Azure Storage account referenced by the AzureWebJobsStorage and WEBSITE_CONTENTAZUREFILECONNECTIONSTRING app settings, [via private endpoints](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#private-endpoint-connections). 
@@ -79,3 +89,5 @@ The following DNS zones are created in this sample:
 For more information on configuring Azure Storage firewalls and virtual networks, please refer: [Configure Azure Storage firewalls and virtual networks](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal)
 
 For more information on Azure Functions networking options and VNET integration, please refer: [Azure Functions Networking Options](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#restrict-your-storage-account-to-a-virtual-network)
+
+`Tags: Microsoft.Network/privateDnsZones/virtualNetworkLinks, Microsoft.Network/privateEndpoints/privateDnsZoneGroups, Microsoft.Network/virtualNetworks, Microsoft.Network/privateDnsZones, Microsoft.Network/privateEndpoints, Microsoft.Storage/storageAccounts, Microsoft.Storage/storageAccounts/fileServices/shares, Microsoft.Insights/components, Microsoft.Web/serverfarms, Microsoft.Web/sites`
