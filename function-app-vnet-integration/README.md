@@ -1,5 +1,5 @@
 ---
-description: This template allows you to deploy an Azure Function Premium plan with regional virtual network integration enabled to a newly created virtual network.
+description: This template provisions a function app on a Premium plan with regional virtual network integration enabled to a newly created virtual network.
 page_type: sample
 products:
 - azure
