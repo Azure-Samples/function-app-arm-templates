@@ -1,3 +1,13 @@
+---
+description: This template provisions a function app on a Premium plan with production slot and an aditional deployment slot.
+page_type: sample
+products:
+- azure
+- azure-resource-manager
+urlFragment: function-app-deployment-slot
+languages:
+- json
+---
 # Azure Function App with a Deployment Slot
 
 This sample Azure Resource Manager template deploys an Azure Function App with production slot and an aditional <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots">deployment slot</a>.
@@ -41,3 +51,5 @@ The Storage account that the Function uses for operation and for file contents.
 [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview) is used to provide [monitor the Azure Function](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
 
 + **Microsoft.Insights/components**: The Application Insights instance used by the Azure Function for monitoring.
+
+`Tags: Microsoft.Storage/storageAccounts, microsoft.insights/components, Microsoft.Web/serverfarms, Microsoft.Web/sites, Microsoft.Web/sites/slots`
