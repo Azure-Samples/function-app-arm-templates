@@ -1,3 +1,13 @@
+---
+description: This template allows you to deploy an Azure Function Premium plan with regional virtual network integration enabled to a newly created virtual network.
+page_type: sample
+products:
+- azure
+- azure-resource-manager
+urlFragment: function-app-vnet-integration
+languages:
+- json
+---
 # Azure Function App with Virtual Network Integration
 
 This sample Azure Resource Manager template deploys an Azure Function Premium plan with [virtual network integration](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#virtual-network-integration) enabled and allows the Azure Function to utilizes resources within the virtual network.
@@ -44,3 +54,4 @@ The Storage account that the Function uses for operation and for file contents.
 
 + For more information on Azure Functions networking options and VNET integration, please refer: [Azure Functions Networking Options](https://docs.microsoft.com/en-us/azure/azure-functions/functions-networking-options#restrict-your-storage-account-to-a-virtual-network)
 
+`Tags: Microsoft.Network/virtualNetworks, Microsoft.Storage/storageAccounts, Microsoft.Insights/components, Microsoft.Web/serverfarms, Microsoft.Web/sites`
