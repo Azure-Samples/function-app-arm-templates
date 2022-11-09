@@ -4,7 +4,7 @@ page_type: sample
 products:
 - azure
 - azure-resource-manager
-urlFragment: function-app-windows-consumption
+urlFragment: function-app-linux-consumption
 languages:
 - json
 ---
