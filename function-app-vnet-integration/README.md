@@ -4,9 +4,11 @@ page_type: sample
 products:
 - azure
 - azure-resource-manager
+- bicep
 urlFragment: function-app-vnet-integration
 languages:
 - json
+- bicep
 ---
 # Azure Function App with Virtual Network Integration
 
@@ -26,7 +28,7 @@ This template has a parameter `functionPlanOS` to choose Windows or Linux OS. Wi
 
 ### Elastic Premium Plan
 
-The Azure Function app provisioned in this sample uses an [Azure Functions Elastic Premium plan](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#features). 
+The Azure Function app provisioned in this sample uses an [Azure Functions Elastic Premium plan](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#features).
 
 + **Microsoft.Web/serverfarms**: The Azure Functions Premium plan (a.k.a. Elastic Premium plan)
 
@@ -38,7 +40,7 @@ The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure
 
 ### Azure Storage account
 
-The Storage account that the Function uses for operation and for file contents. 
+The Storage account that the Function uses for operation and for file contents.
 
 + **Microsoft.Storage/storageAccounts**: [Azure Functions requires a storage account](https://docs.microsoft.com/azure/azure-functions/storage-considerations) for the function app instance.
 
