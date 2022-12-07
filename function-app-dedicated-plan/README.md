@@ -6,6 +6,7 @@ products:
 - azure-resource-manager
 urlFragment: function-app-dedicated-plan
 languages:
+- bicep
 - json
 ---
 # Azure Function App Hosted on Dedicated Plan
@@ -20,7 +21,7 @@ This template has a parameter `functionPlanOS` to choose Windows or Linux OS. Wi
 
 ### Dedicated Plan
 
-The Azure Function app provisioned in this sample uses an [Azure Functions Dedicated plan](https://docs.microsoft.com/en-us/azure/azure-functions/dedicated-plan). 
+The Azure Function app provisioned in this sample uses an [Azure Functions Dedicated plan](https://docs.microsoft.com/en-us/azure/azure-functions/dedicated-plan).
 
 + **Microsoft.Web/serverfarms**: The Azure Functions Dedicated plan (a.k.a. App Service plan)
 
@@ -38,7 +39,7 @@ The Zip Deploy extension is added along with recommended app setting `WEBSITE_RU
 
 ### Azure Storage account
 
-The Storage account that the Function uses for operation and for file contents. 
+The Storage account that the Function uses for operation and for file contents.
 
 + **Microsoft.Storage/storageAccounts**: [Azure Functions requires a storage account](https://docs.microsoft.com/azure/azure-functions/storage-considerations) for the function app instance.
 
