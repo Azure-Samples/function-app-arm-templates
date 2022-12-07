@@ -6,6 +6,7 @@ products:
 - azure-resource-manager
 urlFragment: function-app-deployment-slot
 languages:
+- bicep
 - json
 ---
 # Azure Function App with a Deployment Slot
@@ -20,7 +21,7 @@ This template has a parameter `functionPlanOS` to choose Windows or Linux OS. Wi
 
 ### Elastic Premium Plan
 
-The Azure Function app provisioned in this sample uses an [Azure Functions Elastic Premium plan](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#features). 
+The Azure Function app provisioned in this sample uses an [Azure Functions Elastic Premium plan](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#features).
 
 + **Microsoft.Web/serverfarms**: The Azure Functions Premium plan (a.k.a. Elastic Premium plan)
 
@@ -32,7 +33,7 @@ The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure
 
 ### Deployment Slot
 
-Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots) allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand. 
+Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots) allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand.
 
 Function apps running under the Apps Service plan may have multiple slots, while under the Consumption plan only one slot is allowed.
 
@@ -42,7 +43,7 @@ For Windows, do not need to set the [WEBSITE_CONTENTSHARE](https://docs.microsof
 
 ### Azure Storage account
 
-The Storage account that the Function uses for operation and for file contents. 
+The Storage account that the Function uses for operation and for file contents.
 
 + **Microsoft.Storage/storageAccounts**: [Azure Functions requires a storage account](https://docs.microsoft.com/azure/azure-functions/storage-considerations) for the function app instance.
 
