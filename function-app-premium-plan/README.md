@@ -7,8 +7,8 @@ products:
 - bicep
 urlFragment: function-app-premium-plan
 languages:
-- json
 - bicep
+- json
 ---
 # Azure Function App Hosted on Premium Plan
 

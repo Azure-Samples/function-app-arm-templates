@@ -7,8 +7,8 @@ products:
 - bicep
 urlFragment: function-app-vnet-integration
 languages:
-- json
 - bicep
+- json
 ---
 # Azure Function App with Virtual Network Integration
 
