@@ -12,6 +12,9 @@ param storageAccountType string = 'Standard_LRS'
 @description('Location for all resources.')
 param location string = resourceGroup().location
 
+@description('Location for Application Insights')
+param appInsightsLocation string = resourceGroup().location
+
 @description('The language worker runtime to load in the function app.')
 @allowed([
   'dotnet'
@@ -21,12 +24,31 @@ param location string = resourceGroup().location
 ])
 param functionWorkerRuntime string = 'node'
 
+@description('Specifies the OS used for the Azure Function hosting plan.')
+@allowed([
+  'Windows'
+  'Linux'
+])
+param functionPlanOS string = 'Windows'
+
+@description('Specifies the Azure Function hosting plan SKU.')
+@allowed([
+  'S1'
+  'S2'
+  'S3'
+])
+param functionAppPlanSku string = 'S1'
+
 @description('The zip content url.')
 param packageUri string
+
+@description('Only required for Linux app to represent runtime stack in the format of \'runtime|runtimeVersion\'. For example: \'python|3.9\'')
+param linuxFxVersion string = ''
 
 var hostingPlanName = functionAppName
 var applicationInsightsName = functionAppName
 var storageAccountName = '${uniqueString(resourceGroup().id)}azfunctions'
+var isReserved = ((functionPlanOS == 'Linux') ? true : false)
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   name: storageAccountName
@@ -41,19 +63,19 @@ resource hostingPlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: hostingPlanName
   location: location
   sku: {
-    name: 'Y1'
-    tier: 'Dynamic'
-    size: 'Y1'
-    family: 'Y'
+    tier: 'Standard'
+    name: functionAppPlanSku
+    family: 'S'
+    capacity: 1
   }
   properties: {
-    computeMode: 'Dynamic'
+    reserved: isReserved
   }
 }
 
 resource applicationInsight 'Microsoft.Insights/components@2020-02-02' = {
   name: applicationInsightsName
-  location: location
+  location: appInsightsLocation
   tags: {
     'hidden-link:${resourceId('Microsoft.Web/sites', applicationInsightsName)}': 'Resource'
   }
@@ -66,10 +88,13 @@ resource applicationInsight 'Microsoft.Insights/components@2020-02-02' = {
 resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
   name: functionAppName
   location: location
-  kind: 'functionapp'
+  kind: (isReserved ? 'functionapp,linux' : 'functionapp')
   properties: {
+    reserved: isReserved
     serverFarmId: hostingPlan.id
     siteConfig: {
+      alwaysOn: true
+      linuxFxVersion: (isReserved ? linuxFxVersion : json('null'))
       appSettings: [
         {
           name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
@@ -78,14 +103,6 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
         {
           name: 'AzureWebJobsStorage'
           value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
-        }
-        {
-          name: 'WEBSITE_CONTENTAZUREFILECONNECTIONSTRING'
-          value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccountName};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storageAccount.listKeys().keys[0].value}'
-        }
-        {
-          name: 'WEBSITE_CONTENTSHARE'
-          value: toLower(functionAppName)
         }
         {
           name: 'FUNCTIONS_EXTENSION_VERSION'
@@ -108,7 +125,7 @@ resource functionApp 'Microsoft.Web/sites@2022-03-01' = {
   }
 }
 
-resource zipDeploy 'Microsoft.Web/sites/extensions@2022-03-01' = {
+resource zipdeploy 'Microsoft.Web/sites/extensions@2022-03-01' = {
   parent: functionApp
   name: 'zipdeploy'
   properties: {
