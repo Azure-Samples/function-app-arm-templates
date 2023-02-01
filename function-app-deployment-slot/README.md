@@ -33,7 +33,7 @@ The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure
 
 ### Deployment Slot
 
-Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots) allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand. This template will auto swap with "production" slot when the deployment is successful for the "deployment" slot.
+Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots) allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand. After the deployment is successful for the "deployment" slot, this template will auto swap "deployment" slot with "production" slot .
 
 Function apps running under the Apps Service plan may have multiple slots, while under the Consumption plan only one slot is allowed.
 
@@ -43,9 +43,9 @@ For Windows, do not need to set the [WEBSITE_CONTENTSHARE](https://docs.microsof
 
 ### ZipDeploy Extension
 
-The Zip Deploy extension is added along with recommended app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. This is the recommended path for deployment, except for [Linux Consumption Plan](/function-app-linux-consumption)
+The Zip Deploy extension is added for "deployment" slot along with recommended app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. This is the recommended path for deployment, except for [Linux Consumption Plan](/function-app-linux-consumption)
 
-+ **Microsoft.Web/sites/slots/extensions**: The ZipDeploy extension.
++ **Microsoft.Web/sites/slots/extensions**: The ZipDeploy extension for "deployment" slot.
 
 ### Azure Storage account
 
