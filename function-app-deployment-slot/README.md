@@ -33,13 +33,19 @@ The Function App uses the [AzureWebJobsStorage](https://docs.microsoft.com/azure
 
 ### Deployment Slot
 
-Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots) allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand.
+Azure Functions [deployment slots](https://docs.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots) allow your function app to run different instances called "slots". Slots are different environments exposed via a publicly available endpoint. One app instance is always mapped to the production slot, and you can swap instances assigned to a slot on demand. This template will auto swap with "production" slot when the deployment is successful for the "deployment" slot.
 
 Function apps running under the Apps Service plan may have multiple slots, while under the Consumption plan only one slot is allowed.
 
 For Windows, do not need to set the [WEBSITE_CONTENTSHARE](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings#website_contentshare) setting in a deployment slot. This setting is generated for you when the app is created in the deployment slot.
 
 + **Microsoft.Web/sites/slots**: The deployment slot for the function app.
+
+### ZipDeploy Extension
+
+The Zip Deploy extension is added along with recommended app setting `WEBSITE_RUN_FROM_PACKAGE=1` to mount the zip package for deployment. This is the recommended path for deployment, except for [Linux Consumption Plan](/function-app-linux-consumption)
+
++ **Microsoft.Web/sites/slots/extensions**: The ZipDeploy extension.
 
 ### Azure Storage account
 
