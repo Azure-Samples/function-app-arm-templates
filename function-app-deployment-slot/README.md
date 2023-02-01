@@ -41,7 +41,9 @@ For Windows, do not need to set the [WEBSITE_CONTENTSHARE](https://docs.microsof
 
 + **Microsoft.Web/sites/slots**: The deployment slot for the function app.
 
-For swapping the 2 slots, it is recommended to have a separate template which can run after this template runs successfully with ZipDeploy and deployment slot has been tested (if any testing steps involved). Here is the template for swapping: [Use ARM templates to swap deployment slots - Azure App Service](https://azure.github.io/AppService/2019/10/02/Swap-slots-with-arm-templates.html)
+For swapping the 2 slots, it is recommended to have 2 separate templates:
+1. First run this template successfully for deploying to slot using ZipDeploy.
+2. Then run this [template for swapping slots](https://azure.github.io/AppService/2019/10/02/Swap-slots-with-arm-templates.html).
 
 ### ZipDeploy Extension
 
