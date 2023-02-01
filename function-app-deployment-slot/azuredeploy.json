@@ -208,7 +208,6 @@
                 "reserved": "[variables('isReserved')]",
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('hostingPlanName'))]",
                 "siteConfig": {
-                    "autoSwapSlotName": "production",
                     "linuxFxVersion": "[if(variables('isReserved'), parameters('linuxFxVersion'), json('null'))]",
                     "appSettings": [
                         {
