@@ -126,7 +126,7 @@
           "appSettings": [
             {
               "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
-              "value": "[reference(resourceId('Microsoft.Insights/components', parameters('functionAppName')), '2022-03-01').InstrumentationKey]"
+              "value": "[reference(resourceId('Microsoft.Insights/components', parameters('functionAppName')), '2020-02-02').InstrumentationKey]"
             },
             {
               "name": "AzureWebJobsStorage",
