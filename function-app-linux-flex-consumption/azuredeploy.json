@@ -35,19 +35,6 @@
         "description": "Location for Application Insights"
       }
     },
-    "functionWorkerRuntime": {
-      "type": "string",
-      "defaultValue": "node",
-      "allowedValues": [
-        "dotnet",
-        "node",
-        "python",
-        "java"
-      ],
-      "metadata": {
-        "description": "The language worker runtime to load in the function app."
-      }
-    },
     "functionAppRuntime": {
       "type": "string",
       "defaultValue": "python",
@@ -125,20 +112,20 @@
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices",
       "apiVersion": "2023-01-01",
-      "name": "[format('{0}/{1}', parameters('storageAccountName'), 'default')]",
+      "name": "[format('{0}/{1}', variables('storageAccountName'), 'default')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
       ]
     },
     {
       "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
       "apiVersion": "2023-01-01",
-      "name": "[format('{0}/{1}/{2}', parameters('storageAccountName'), 'default', variables('deploymentStorageContainerName'))]",
+      "name": "[format('{0}/{1}/{2}', variables('storageAccountName'), 'default', variables('deploymentStorageContainerName'))]",
       "properties": {
         "publicAccess": "None"
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccountName'), 'default')]"
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('storageAccountName'), 'default')]"
       ]
     },
     {
@@ -183,7 +170,7 @@
           "deployment": {
             "storage": {
               "type": "blobContainer",
-              "value": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))).primaryEndpoints.blob, variables('deploymentStorageContainerName'))]",
+              "value": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))).primaryEndpoints.blob, variables('deploymentStorageContainerName'))]",
               "authentication": {
                 "type": "SystemAssignedIdentity"
               }
@@ -202,7 +189,7 @@
           "appSettings": [
             {
               "name": "AzureWebJobsStorage__accountName",
-              "value": "[parameters('storageAccountName')]"
+              "value": "[variables('storageAccountName')]"
             },
             {
               "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
