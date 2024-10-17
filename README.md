@@ -24,6 +24,7 @@ Create and deploy Functions app for following OS and SKU combinations:
 4. Create Function App with Consumption Plan on Linux:
     - [Deploy zip package with Run From Package](/function-app-linux-consumption)
     - [Deploy zip package with Remote Build](/function-app-linux-consumption-remote-build)
+5. Create [Function App with Flex Consumption Plan on Linux](/function-app-linux-flex-consumption)
 
 Create Functions app and resources for following networking scenarios:
 
