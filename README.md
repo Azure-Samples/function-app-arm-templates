@@ -25,7 +25,7 @@ Please visit [FlexConsumption Samples](https://github.com/azure-samples/azure-fu
 1. Functions Quickstarts using Azure Developer CLI to create and deploy your code.
 2. ARM Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/armtemplate/README.md)
 3. Bicep Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/bicep/README.md)
-4. Terraform Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/terraform/README.md])
+4. Terraform Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/terraform/README.md)
 
 Create and deploy Functions app for following OS and SKU combinations:
 
