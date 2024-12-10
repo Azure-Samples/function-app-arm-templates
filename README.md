@@ -16,6 +16,17 @@ products:
 
 This repo contains currently available Azure Resource Manager templates for deploying Function App with recommended settings and best practices. 
 
+## Flex Consumption
+
+The examples for the Flex Consumption plan are located in a different place. 
+
+Please visit [FlexConsumption Samples](https://github.com/azure-samples/azure-functions-flex-consumption-samples/) for these scenarios.
+
+1. Functions Quickstarts using Azure Developer CLI to create and deploy your code.
+2. ARM Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/armtemplate/README.md)
+3. Bicep Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/bicep/README.md)
+4. Terraform Template [Sample](https://github.com/Azure-Samples/azure-functions-flex-consumption-samples/blob/main/IaC/terraform/README.md)
+
 Create and deploy Functions app for following OS and SKU combinations:
 
 1. Create [Function App with Premium Plan](/function-app-premium-plan) on Windows/Linux
